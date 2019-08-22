@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ro.ciubex.dscautorename">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -6,8 +7,12 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+
+    <!-- Keep CPU running while doing background work. This is only used if beeing called via Tasker/Locale. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-feature android:name="android.hardware.camera" />
 
@@ -119,7 +124,8 @@
 
         <service
             android:name="ro.ciubex.dscautorename.service.FileRenameService"
-            android:enabled="true" />
+            android:enabled="true"
+            android:permission="android.permission.FOREGROUND_SERVICE" />
 
         <provider
             android:name="ro.ciubex.dscautorename.provider.CachedFileProvider"
@@ -130,6 +136,58 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/fileprovider" />
         </provider>
+
+        <!-- BEGIN TASKER INTEGRATION -->
+        <activity
+            android:name=".activity.PluginEditActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="UnusedAttribute" />
+        <!--
+        Locale will reject plug-in Activities for the following reasons:
+         - Missing "android:label=[...]"
+         - Missing "android:icon=[...]"
+         - The Activity isn't exported (e.g. android:exported="false")
+         - The Activity isn't enabled (e.g. android:enabled="false")
+         - The Activity requires permissions not available to Locale
+         -->
+        <activity-alias
+            android:name=".activity.PluginActivity"
+            android:exported="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".activity.PluginEditActivity"
+            tools:ignore="ExportedActivity">
+            <!-- this Intent filter allows the plug-in to be discovered by the host. -->
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity-alias>
+        <!--
+             Note that Locale will reject plug-in BroadcastReceivers for the following reasons:
+                - The BroadcastReceiver isn't exported (e.g. android:exported="false")
+                - The BroadcastReceiver isn't enabled (e.g. android:enabled="false")
+                - The BroadcastReceiver requires permissions not available to Locale
+                - There are multiple BroadcastReceivers for com.twofortyfouram.locale.intent.action.FIRE_SETTING
+        -->
+        <receiver
+            android:name=".receiver.PluginFireReceiver"
+            android:exported="true"
+            android:process=":background"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.FIRE_SETTING" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".service.PluginBackgroundService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":background" />
+        <!-- END TASKER INTEGRATION -->
     </application>
 
 </manifest>

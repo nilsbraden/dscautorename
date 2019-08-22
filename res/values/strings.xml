@@ -257,4 +257,5 @@
     <string name="ui_settings">UI settings</string>
     <string name="update_message" translatable="false">Please read the Help section below!</string>
     <string name="yes">Yes</string>
+    <string name="plugin_message">This plugin doesn\'t offer any configuration. Please use the main App \"DSC Auto Rename\" to configure settings.\n\nInvoking this plugin will have the same effect as starting the renaming process with the widget.</string>
 </resources>

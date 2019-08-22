@@ -79,6 +79,7 @@ public class FileRenameThread implements Runnable {
     private Object mMediaMetadataRetriever;
     private Set<String> mFilesToUpdate;
     private Set<Uri> mBroadcastingMessages;
+    private long mTimeStart = 0L;
 
     public interface Listener {
         void onThreadStarted();
@@ -145,6 +146,8 @@ public class FileRenameThread implements Runnable {
      */
     @Override
     public void run() {
+        mTimeStart = System.currentTimeMillis();
+
         onPreExecute();
         mContentResolver = mApplication.getContentResolver();
         int total = 0;
@@ -169,7 +172,9 @@ public class FileRenameThread implements Runnable {
                 doBroadcastingMessages();
             }
         }
-        mApplication.logD(TAG, "Finished run()");
+
+        long timeSpent = System.currentTimeMillis() - mTimeStart;
+        mApplication.logD(TAG, String.format("Finished run() after %s ms", timeSpent));
         onPostExecute(total);
     }
 
