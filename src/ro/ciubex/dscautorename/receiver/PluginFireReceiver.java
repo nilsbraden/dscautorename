@@ -27,10 +27,10 @@ public class PluginFireReceiver extends AbstractPluginSettingReceiver {
     @Override
     protected void firePluginSetting(@NonNull final Context context, @NonNull final Bundle bundle) {
         try {
-            Log.d(TAG, "PluginFireReceiver.firePluginSetting() called...");
+            Log.d(TAG, "firePluginSetting() called...");
             PluginBackgroundService.enqueueWork(context, new Intent());
         } catch (Exception e) {
-            Log.d(TAG, "PluginFireReceiver.firePluginSetting() EXCEPTION...");
+            Log.d(TAG, "firePluginSetting() EXCEPTION...");
             e.printStackTrace();
         }
     }

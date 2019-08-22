@@ -23,24 +23,23 @@ public final class PluginBackgroundService
 
     @Override
     protected void onHandleWork(@NonNull Intent intent) {
-        // ACTUAL RENAMING OF FILES
+        // ACTUAL RENAMING OF FILES:
         Log.d(TAG, "onHandleWork called...");
         ((DSCApplication) getApplication()).launchAutoRenameTask(this, true, null, true);
     }
 
     @Override
     public void onTaskStarted() {
-        // TODO: Return update to plugin if possible
+        // Do nothing, plugin doesn't return any information on progress
     }
 
     @Override
     public void onTaskUpdate(int position, int max, String message) {
-        // TODO: Return update to plugin if possible
+        // Do nothing, plugin doesn't return any information on progress
     }
 
     @Override
     public void onTaskFinished(int count) {
-        // TODO: Return update to plugin if possible
         Log.d(TAG, "onTaskFinished called...");
     }
 

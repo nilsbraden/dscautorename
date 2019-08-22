@@ -13,6 +13,10 @@ import ro.ciubex.dscautorename.DSCApplication;
 import ro.ciubex.dscautorename.R;
 import ro.ciubex.dscautorename.util.PluginBundleValues;
 
+/**
+ * Just show a textview with a note telling the user to configure everything within the app, the
+ * plugin doesn't provide any configuration options.
+ */
 public class PluginEditActivity extends AbstractAppCompatPluginActivity {
     private static final String TAG = PluginEditActivity.class.getName();
 
@@ -69,13 +73,13 @@ public class PluginEditActivity extends AbstractAppCompatPluginActivity {
 
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
-        // Nothing to do here
-        return true;
+        // Nothing to do here, we don't need the options menu
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(final MenuItem item) {
-        // Nothing to do here
+        // Nothing to do here, we don't need the options menu
         return super.onOptionsItemSelected(item);
     }
 
