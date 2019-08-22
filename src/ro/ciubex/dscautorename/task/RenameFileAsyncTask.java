@@ -1,24 +1,23 @@
 /**
  * This file is part of DSCAutoRename application.
- *
+ * <p>
  * Copyright (C) 2016 Claudiu Ciobotariu
- *
+ * <p>
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- *
+ * <p>
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- *
+ * <p>
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package ro.ciubex.dscautorename.task;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
 
@@ -26,7 +25,6 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 
 import ro.ciubex.dscautorename.DSCApplication;
-import ro.ciubex.dscautorename.R;
 
 /**
  * An AsyncTask used to rename files.
@@ -34,9 +32,8 @@ import ro.ciubex.dscautorename.R;
  * @author Claudiu Ciobotariu
  */
 public class RenameFileAsyncTask extends AsyncTask<Void, Integer, Integer>
-		implements FileRenameThread.Listener {
+	implements FileRenameThread.Listener {
 	private final WeakReference<Listener> mListener;
-	private Context mContext;
 	private FileRenameThread mFileRenameThread;
 	private boolean mFinished;
 	private int mCount;
@@ -44,7 +41,7 @@ public class RenameFileAsyncTask extends AsyncTask<Void, Integer, Integer>
 	public interface Listener {
 		void onTaskStarted();
 
-		void onTaskUpdate(int position, int max, String message);
+		void onTaskUpdate(int position, int max);
 
 		void onTaskFinished(int count);
 
@@ -54,7 +51,6 @@ public class RenameFileAsyncTask extends AsyncTask<Void, Integer, Integer>
 	public RenameFileAsyncTask(DSCApplication application, Listener listener, boolean noDelay, List<Uri> fileUris) {
 		mFileRenameThread = new FileRenameThread(application, this, noDelay, fileUris);
 		this.mListener = new WeakReference<>(listener);
-		mContext = application.getApplicationContext();
 	}
 
 	/**
@@ -84,11 +80,7 @@ public class RenameFileAsyncTask extends AsyncTask<Void, Integer, Integer>
 			if (listener != null && !listener.isFinishing()) {
 				int position = values[0];
 				int max = values[1];
-				String message = mContext.getString(
-						position == 1 ? R.string.manually_file_rename_progress_1
-								: R.string.manually_file_rename_progress_more,
-						position, max);
-				listener.onTaskUpdate(position, max, message);
+				listener.onTaskUpdate(position, max);
 			}
 		}
 	}
@@ -119,7 +111,7 @@ public class RenameFileAsyncTask extends AsyncTask<Void, Integer, Integer>
 	 */
 	@Override
 	protected Integer doInBackground(Void... params) {
-		while(!mFinished) {
+		while (!mFinished) {
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {

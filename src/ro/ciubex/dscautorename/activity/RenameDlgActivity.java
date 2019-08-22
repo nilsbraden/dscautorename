@@ -1,18 +1,18 @@
 /**
  * This file is part of DSCAutoRename application.
- * 
+ * <p>
  * Copyright (C) 2016 Claudiu Ciobotariu
- * 
+ * <p>
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ * <p>
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ * <p>
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -20,7 +20,6 @@ package ro.ciubex.dscautorename.activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -32,7 +31,6 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,12 +41,11 @@ import ro.ciubex.dscautorename.util.Utilities;
 
 /**
  * This class define a dialog activity for the manually launched rename service.
- * 
+ *
  * @author Claudiu Ciobotariu
- * 
  */
 public class RenameDlgActivity extends Activity implements
-		RenameFileAsyncTask.Listener {
+	RenameFileAsyncTask.Listener {
 	private static final String TAG = RenameDlgActivity.class.getName();
 	private DSCApplication mApplication;
 	private TextView mRenameProgressMessage;
@@ -183,27 +180,27 @@ public class RenameDlgActivity extends Activity implements
 	private void showServiceStartConfirmationDialog() {
 		if (!isFinishing()) {
 			new AlertDialog.Builder(RenameDlgActivity.this)
-					.setTitle(R.string.app_name)
-					.setMessage(mApplication.getSdkInt() > 18 ?
-							R.string.confirmation_rename_question_v19
-							: R.string.confirmation_rename_question)
-					.setIcon(android.R.drawable.ic_dialog_info)
-					.setPositiveButton(R.string.yes,
-							new DialogInterface.OnClickListener() {
+				.setTitle(R.string.app_name)
+				.setMessage(mApplication.getSdkInt() > 18 ?
+					R.string.confirmation_rename_question_v19
+					: R.string.confirmation_rename_question)
+				.setIcon(android.R.drawable.ic_dialog_info)
+				.setPositiveButton(R.string.yes,
+					new DialogInterface.OnClickListener() {
 
-								public void onClick(DialogInterface dialog,
-													int whichButton) {
-									doStartRenameService();
-								}
-							})
-					.setNegativeButton(R.string.no,
-							new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog,
+											int whichButton) {
+							doStartRenameService();
+						}
+					})
+				.setNegativeButton(R.string.no,
+					new DialogInterface.OnClickListener() {
 
-								public void onClick(DialogInterface dialog,
-													int whichButton) {
-									doFinish();
-								}
-							}).show();
+						public void onClick(DialogInterface dialog,
+											int whichButton) {
+							doFinish();
+						}
+					}).show();
 		}
 	}
 
@@ -242,29 +239,30 @@ public class RenameDlgActivity extends Activity implements
 
 	/**
 	 * Method invoked from the rename task when an update is required.
-	 * 
-	 * @param position
-	 *            Current number of renamed files.
-	 * @param count
-	 *            The number of total files to be renamed.
-	 * @param message
-	 *            The message to be displayed on progress dialog.
+	 *
+	 * @param position Current number of renamed files.
+	 * @param max      The number of total files to be renamed.
 	 */
 	@Override
-	public void onTaskUpdate(int position, int count, String message) {
+	public void onTaskUpdate(int position, int max) {
+		String message = String.format(
+			position == 1
+				? getString(R.string.manually_file_rename_progress_1)
+				: getString(R.string.manually_file_rename_progress_more),
+			position, max);
+
 		mRenameProgressMessage.setText(message);
 		if (position == 0) {
 			mRenameProgressBar.setIndeterminate(false);
-			mRenameProgressBar.setMax(count);
+			mRenameProgressBar.setMax(max);
 		}
 		mRenameProgressBar.setProgress(position);
 	}
 
 	/**
 	 * Method invoked at the end of rename file async task.
-	 * 
-	 * @param count
-	 *            Number of renamed files.
+	 *
+	 * @param count Number of renamed files.
 	 */
 	@Override
 	public void onTaskFinished(int count) {
@@ -275,31 +273,31 @@ public class RenameDlgActivity extends Activity implements
 				break;
 			case 0:
 				message = mApplication.getApplicationContext()
-						.getString(R.string.manually_file_rename_count_0);
+					.getString(R.string.manually_file_rename_count_0);
 				break;
 			case 1:
 				message = mApplication.getApplicationContext()
-						.getString(R.string.manually_file_rename_count_1);
+					.getString(R.string.manually_file_rename_count_1);
 				break;
 			default:
 				message = count > 0 ?
-						mApplication.getApplicationContext().getString(R.string.manually_file_rename_count_more, count) :
-						mApplication.getApplicationContext().getString(R.string.manually_file_rename_minus_more, (count * -1));
+					mApplication.getApplicationContext().getString(R.string.manually_file_rename_count_more, count) :
+					mApplication.getApplicationContext().getString(R.string.manually_file_rename_minus_more, (count * -1));
 				break;
 		}
 		if (!isFinishing()) {
 			AlertDialog.Builder dialog = new AlertDialog.Builder(RenameDlgActivity.this)
-					.setTitle(R.string.app_name)
-					.setMessage(message)
-					.setIcon(android.R.drawable.ic_dialog_alert)
-					.setNeutralButton(R.string.ok,
-							new DialogInterface.OnClickListener() {
+				.setTitle(R.string.app_name)
+				.setMessage(message)
+				.setIcon(android.R.drawable.ic_dialog_alert)
+				.setNeutralButton(R.string.ok,
+					new DialogInterface.OnClickListener() {
 
-								public void onClick(DialogInterface dialog,
-													int whichButton) {
-									doFinish();
-								}
-							});
+						public void onClick(DialogInterface dialog,
+											int whichButton) {
+							doFinish();
+						}
+					});
 			dialog.show();
 		}
 	}
