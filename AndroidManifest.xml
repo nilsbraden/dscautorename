@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
     <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
@@ -20,20 +19,23 @@
         android:name="ro.ciubex.dscautorename.DSCApplication"
         android:allowBackup="true"
         android:backupAgent="ro.ciubex.dscautorename.util.DSCBackupAgent"
-        android:icon="@drawable/ic_launcher"
+        android:fullBackupContent="@xml/backupscheme"
         android:grantUriPermissions="true"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppThemeLight"
-        android:fullBackupContent="@xml/backupscheme">
+        tools:ignore="GoogleAppIndexingWarning">
 
         <!-- backup data for API < 23 -->
-        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIZnobN2u7WEcf6gpr3_TB-UkcIWfYx0PMLMAnmw" />
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAIZnobN2u7WEcf6gpr3_TB-UkcIWfYx0PMLMAnmw" />
 
         <activity
             android:name="ro.ciubex.dscautorename.activity.SettingsActivity"
-            android:taskAffinity=".SettingsActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:taskAffinity=".SettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,14 +44,14 @@
         </activity>
         <activity
             android:name="ro.ciubex.dscautorename.activity.InfoActivity"
-            android:taskAffinity=".InfoActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:taskAffinity=".InfoActivity" />
         <activity
             android:name="ro.ciubex.dscautorename.activity.RenameDlgActivity"
-            android:taskAffinity=".RenameDlgActivity"
             android:excludeFromRecents="true"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Dialog" >
+            android:taskAffinity=".RenameDlgActivity"
+            android:theme="@android:style/Theme.Dialog">
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
 
@@ -58,12 +60,14 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
                 <data android:mimeType="video/*" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND_MULTIPLE" />
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
                 <data android:mimeType="video/*" />
             </intent-filter>
@@ -72,7 +76,7 @@
         <receiver
             android:name="ro.ciubex.dscautorename.receiver.BootEventReceiver"
             android:enabled="true"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -80,7 +84,7 @@
         <receiver
             android:name="ro.ciubex.dscautorename.receiver.CameraEventReceiver"
             android:enabled="true"
-            android:permission="android.permission.CAMERA" >
+            android:permission="android.permission.CAMERA">
             <intent-filter>
                 <action android:name="com.android.camera.NEW_PICTURE" />
                 <action android:name="com.android.camera.NEW_VIDEO" />
@@ -93,22 +97,23 @@
         </receiver>
         <receiver
             android:name="ro.ciubex.dscautorename.receiver.ShortcutInstallReceiver"
-            android:permission="com.android.launcher.permission.INSTALL_SHORTCUT" >
+            android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
             <intent-filter>
                 <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
             </intent-filter>
         </receiver>
         <receiver
             android:name="ro.ciubex.dscautorename.receiver.ShortcutUninstallReceiver"
-            android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT" >
+            android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT">
             <intent-filter>
                 <action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />
             </intent-filter>
         </receiver>
 
-        <service android:name="ro.ciubex.dscautorename.service.MediaContentJobService"
+        <service
+            android:name="ro.ciubex.dscautorename.service.MediaContentJobService"
             android:enabled="true"
-            android:permission="android.permission.BIND_JOB_SERVICE"/>
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <service
             android:name="ro.ciubex.dscautorename.service.MediaStorageObserverService"
@@ -130,8 +135,8 @@
         <provider
             android:name="ro.ciubex.dscautorename.provider.CachedFileProvider"
             android:authorities="ro.ciubex.dscautorename.provider"
-            android:exported="true"
-            android:grantUriPermissions="true" >
+            android:exported="false"
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/fileprovider" />
