@@ -1,153 +1,153 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-	<string name="about_section">О программе</string>
-	<string name="add">Добавить</string>
-	<string name="app_theme_desc">Светлая или тёмная</string>
-	<string-array name="app_theme_labels">
-		<item>Светлая</item>
-		<item>Тёмная</item>
-	</string-array>
-	<string name="app_theme_title">Тема оформления:</string>
-	<string name="app_theme_title_param">Тема оформления: %s</string>
-	<string name="append_original_name_desc">Сохранить и добавить оригинальное имя, на пример, с DSC_09.JPG на %s_DSC_09.JPG</string>
-	<string name="append_original_name_title">Добавить оригинальное имя</string>
-	<string name="build_version_title">версия сборки</string>
-	<string name="cancel">Отмена</string>
-	<string name="change_language_desc">Приложение должно быть перезапущено, чтобы применить выбранный язык.</string>
-	<string name="change_language_title">Language: язык приложения</string>
-	<string name="choose_units_desc">Эта опция позволит вам выбрать задержку между секундами и минутами.</string>
-	<string name="choose_units_title">Выберите задержку:</string>
-	<string name="choose_units_title_param">Выбранные задержки: %s</string>
-	<string name="close">Закрыть</string>
-	<string name="confirmation_rename_dialog">Скрыть окно подтверждения</string>
-	<string name="confirmation_rename_dialog_desc">Показывать или нет окно подтверждения, когда сервис запущен с домашнего экрана.</string>
-	<string name="confirmation_rename_question">Вы хотите запустить сервис вручную?</string>
-	<string name="confirmation_rename_question_v19">Если выбранный файл не в выбранной папке переименовать не будет завершена из-за ограничений безопасности Android.\nВы хотите запустить сервис вручную?</string>
-	<string name="create_rename_shortcut">Создать иконку сервиса</string>
-	<string name="create_rename_shortcut_desc">Создать на домашнем экране ярлычок для ручного запуска сервиса переименования</string>
-	<string name="define_file_name_pattern_desc">Шаблоны имён файлов, подлежащих переименованию.
-\nМожно использовать групповые символы \"*\" и \"?\". Например: \"DSC_*.JPG\" или \"MOV_*.MP4\")</string>
-	<string name="define_file_name_pattern_title">Определение шаблонов имён файлов</string>
-	<string-array name="delay_units_labels">
-		<item>секунд</item>
-		<item>минут</item>
-	</string-array>
-	<string name="delete">Удалить</string>
-	<string name="do_not_show_again">Больше не показывать</string>
-	<string name="donate_confirmation">Если приложение понравилось, Вы можете поддержать проект.
+    <string name="about_section">О программе</string>
+    <string name="add">Добавить</string>
+    <string name="app_theme_desc">Светлая или тёмная</string>
+    <string-array name="app_theme_labels">
+        <item>Светлая</item>
+        <item>Тёмная</item>
+    </string-array>
+    <string name="app_theme_title">Тема оформления:</string>
+    <string name="app_theme_title_param">Тема оформления: %s</string>
+    <string name="append_original_name_desc">Сохранить и добавить оригинальное имя, на пример, с DSC_09.JPG на %s_DSC_09.JPG</string>
+    <string name="append_original_name_title">Добавить оригинальное имя</string>
+    <string name="build_version_title">версия сборки</string>
+    <string name="cancel">Отмена</string>
+    <string name="change_language_desc">Приложение должно быть перезапущено, чтобы применить выбранный язык.</string>
+    <string name="change_language_title">Language: язык приложения</string>
+    <string name="choose_units_desc">Эта опция позволит вам выбрать задержку между секундами и минутами.</string>
+    <string name="choose_units_title">Выберите задержку:</string>
+    <string name="choose_units_title_param">Выбранные задержки: %s</string>
+    <string name="close">Закрыть</string>
+    <string name="confirmation_rename_dialog">Скрыть окно подтверждения</string>
+    <string name="confirmation_rename_dialog_desc">Показывать или нет окно подтверждения, когда сервис запущен с домашнего экрана.</string>
+    <string name="confirmation_rename_question">Вы хотите запустить сервис вручную?</string>
+    <string name="confirmation_rename_question_v19">Если выбранный файл не в выбранной папке переименовать не будет завершена из-за ограничений безопасности Android.\nВы хотите запустить сервис вручную?</string>
+    <string name="create_rename_shortcut">Создать иконку сервиса</string>
+    <string name="create_rename_shortcut_desc">Создать на домашнем экране ярлычок для ручного запуска сервиса переименования</string>
+    <string name="define_file_name_pattern_desc">Шаблоны имён файлов, подлежащих переименованию.
+\nМожно использовать групповые символы \"*\" и \"?\". Например: \"DSC_*.JPG\" или \"MOV_*.MP4\"), %s</string>
+    <string name="define_file_name_pattern_title">Определение шаблонов имён файлов</string>
+    <string-array name="delay_units_labels">
+        <item>секунд</item>
+        <item>минут</item>
+    </string-array>
+    <string name="delete">Удалить</string>
+    <string name="do_not_show_again">Больше не показывать</string>
+    <string name="donate_confirmation">Если приложение понравилось, Вы можете поддержать проект.
 \nНажмите «Да» чтобы перейти на страницу покупки «DSC Auto Rename PRO» в Google Play.
 \nСпасибо за использование приложения!</string>
-	<string name="donate_desc">Поддержите проект, если считаете его интересным</string>
-	<string name="donate_title">Пожертвовать</string>
-	<string name="enable_desc">Файлы будут автоматически переименованы после наступления указанных событий</string>
-	<string name="enable_filter_alert_v19">Так как на Андроиде KitKat есть некоторые ограничения безопастности, это приложение не может переименовывать файлы на SD карте.\nСмотреть ссылку http://goo.gl/kJeED3 для возможного решения.\nЭто приложение может переименовывать файлы только из внутренней памяти.\nУстановите в камере сохранение на внутреннюю память.</string>
-	<string name="enable_filter_alert_v21">Пользователям Android 5 Lollipop и выше нужно включить эту функцию и выбрать папки, за которыми следить. Например, куда камера сохраняет фотографии</string>
-	<string name="enable_filter_folder_desc">По умолчанию сервис будет сканировать все файлы на Вашем устройстве. Включив эту опцию, Вы можете задать конкретные папки для сканирования.</string>
-	<string name="enable_filter_folder_desc_v21">Для пользователей Android 5 Lollipop и выше: включите эту функцию и выберите папки, где ваша камера сохраняет файлы</string>
-	<string name="enable_filter_folder_title">Папки для наблюдения</string>
-	<string name="enable_folder_scanning_desc">"Как правило, это должно быть отключено! При выборе этой опции  сервис переименования будет сканировать медиафайлы в выбранных выше папках. Включите, если в вашем аппарате отключен сканер медиа контента."</string>
-	<string name="enable_folder_scanning_title">Включение сканирования в папке.</string>
-	<string name="enable_title">Когда запускать сервис</string>
-	<string name="error_rename_file">Файл %s невозможно переименовать!</string>
-	<string name="error_rename_file_no_read_write">Файл невозможно прочитать и записать</string>
-	<string name="file_extension_note">При переименовании расширение файла не меняется</string>
-	<string name="file_name_pattern_dialog_bottom">Пример старого имени файла:\n\t %1$s\nПример переименованного файла:\n\t %2$s</string>
-	<string name="file_name_pattern_dialog_from">1. Шаблон имени для переименования:</string>
-	<string name="file_name_pattern_dialog_title_add">Добавить шаблоны имен файлов</string>
-	<string name="file_name_pattern_dialog_title_editor">Редактировать шаблоны имён файлов</string>
-	<string name="file_name_pattern_dialog_to">2. Шаблон нового имени файла:</string>
-	<string name="file_name_pattern_list_all_selected">Как минимум один шаблон должен остаться не отмеченным!</string>
-	<string name="file_name_pattern_list_confirmation">Удалить выбранные шаблоны?</string>
-	<string name="file_name_pattern_list_no_selection">Выберите как минимум один шаблон для удаления!</string>
-	<string name="file_name_pattern_validation_error_generic">Указанный шаблон слишком общий, поэтому переименование повторяется по кругу. Следует установить более ограниченный шаблон, используя символы «*», «?» и другие.</string>
-	<string name="file_name_pattern_validation_error_new">Оригинальный и целевой шаблоны совпадают!</string>
-	<string name="file_name_pattern_validation_error_new_empty">Шаблон не может быть пустым</string>
-	<string name="file_name_pattern_validation_error_old">Такой шаблон уже имеется</string>
-	<string name="file_name_pattern_validation_error_old_empty">Шаблон не может быть пустым</string>
-	<string name="file_name_pattern_validation_error_original">Оригинальный шаблон совпадает с целевым шаблоном, определённым ранее!</string>
-	<string name="file_name_pattern_validation_error_rename">Шаблон переименования соответствие с оригинальным узором, определенной на другой случай!</string>
-	<string name="file_name_suffix_format_desc">Этот суффикс используется в случае, если более одного файла получают одинаковое имя. По умолчанию счётчик имеет 5 цифр.
+    <string name="donate_desc">Поддержите проект, если считаете его интересным</string>
+    <string name="donate_title">Пожертвовать</string>
+    <string name="enable_desc">Файлы будут автоматически переименованы после наступления указанных событий</string>
+    <string name="enable_filter_alert_v19">Так как на Андроиде KitKat есть некоторые ограничения безопастности, это приложение не может переименовывать файлы на SD карте.\nСмотреть ссылку http://goo.gl/kJeED3 для возможного решения.\nЭто приложение может переименовывать файлы только из внутренней памяти.\nУстановите в камере сохранение на внутреннюю память.</string>
+    <string name="enable_filter_alert_v21">Пользователям Android 5 Lollipop и выше нужно включить эту функцию и выбрать папки, за которыми следить. Например, куда камера сохраняет фотографии</string>
+    <string name="enable_filter_folder_desc">По умолчанию сервис будет сканировать все файлы на Вашем устройстве. Включив эту опцию, Вы можете задать конкретные папки для сканирования.</string>
+    <string name="enable_filter_folder_desc_v21">Для пользователей Android 5 Lollipop и выше: включите эту функцию и выберите папки, где ваша камера сохраняет файлы</string>
+    <string name="enable_filter_folder_title">Папки для наблюдения</string>
+    <string name="enable_folder_scanning_desc">"Как правило, это должно быть отключено! При выборе этой опции  сервис переименования будет сканировать медиафайлы в выбранных выше папках. Включите, если в вашем аппарате отключен сканер медиа контента."</string>
+    <string name="enable_folder_scanning_title">Включение сканирования в папке.</string>
+    <string name="enable_title">Когда запускать сервис</string>
+    <string name="error_rename_file">Файл %s невозможно переименовать!</string>
+    <string name="error_rename_file_no_read_write">Файл невозможно прочитать и записать</string>
+    <string name="file_extension_note">При переименовании расширение файла не меняется</string>
+    <string name="file_name_pattern_dialog_bottom">Пример старого имени файла:\n\t %1$s\nПример переименованного файла:\n\t %2$s</string>
+    <string name="file_name_pattern_dialog_from">1. Шаблон имени для переименования:</string>
+    <string name="file_name_pattern_dialog_title_add">Добавить шаблоны имен файлов</string>
+    <string name="file_name_pattern_dialog_title_editor">Редактировать шаблоны имён файлов</string>
+    <string name="file_name_pattern_dialog_to">2. Шаблон нового имени файла:</string>
+    <string name="file_name_pattern_list_all_selected">Как минимум один шаблон должен остаться не отмеченным!</string>
+    <string name="file_name_pattern_list_confirmation">Удалить выбранные шаблоны?</string>
+    <string name="file_name_pattern_list_no_selection">Выберите как минимум один шаблон для удаления!</string>
+    <string name="file_name_pattern_validation_error_generic">Указанный шаблон слишком общий, поэтому переименование повторяется по кругу. Следует установить более ограниченный шаблон, используя символы «*», «?» и другие.</string>
+    <string name="file_name_pattern_validation_error_new">Оригинальный и целевой шаблоны совпадают!</string>
+    <string name="file_name_pattern_validation_error_new_empty">Шаблон не может быть пустым</string>
+    <string name="file_name_pattern_validation_error_old">Такой шаблон уже имеется</string>
+    <string name="file_name_pattern_validation_error_old_empty">Шаблон не может быть пустым</string>
+    <string name="file_name_pattern_validation_error_original">Оригинальный шаблон совпадает с целевым шаблоном, определённым ранее!</string>
+    <string name="file_name_pattern_validation_error_rename">Шаблон переименования соответствие с оригинальным узором, определенной на другой случай!</string>
+    <string name="file_name_suffix_format_desc">Этот суффикс используется в случае, если более одного файла получают одинаковое имя. По умолчанию счётчик имеет 5 цифр.
 \nПример:
 \n%s</string>
-	<string name="file_name_suffix_format_title">Суффикс для разрешения конфликтов</string>
-	<string name="file_rename_count_confirmation">Сбросить счётчик переименованных файлов?</string>
-	<string name="file_rename_count_desc">Нажать для сброса количества переименованных файлов</string>
-	<string name="file_rename_count_title">Количество переименованных файлов: %d</string>
-	<string name="filter_folder_no_folder">[Нет папки]</string>
-	<string name="filter_folder_title">Выберите папку</string>
-	<string name="folder_list_all_selected">Как минимум одна папка должна остаться не отмеченной!</string>
-	<string name="folder_list_confirmation">Удалить выбранные папки?</string>
-	<string name="folder_list_no_grant_permission_1">Ваша система отменено разрешения для папки ниже:\n\n%s\n\nПроверьте, где был определен в этой папке и пытаются выбрать его снова!</string>
-	<string name="folder_list_no_grant_permission_2">Ваша система отменено разрешения для папок ниже:.\n\n%s\n\nПроверьте, где были определены эти папки и попытаться выбрать их снова!</string>
-	<string name="folder_list_no_open_document_tree_support">Ваша версия Андроид не поддерживает выбор папок (ACTION_OPEN_DOCUMENT_TREE).\nВы хотите использовать внутреннюю палитру папки, чтобы выбрать папку? Использование внутреннего палитру папок приложение не будет предоставлено право на переименовывать и перемещать файлы!</string>
-	<string name="folder_list_no_selection">Выберите как минимум одну папку для удаления!</string>
-	<string name="folder_list_title">Список папок для наблюдения</string>
-	<string name="general_settings">Основные настройки</string>
-	<string name="license_desc">Подробнее о лицензиях на открытое ПО</string>
-	<string name="license_title">Открыть лицензии</string>
-	<string name="list_info_press">Добавить или удалить элементы</string>
-	<string name="loading_wait">Загрузка…</string>
-	<string name="manually_file_rename_count_0">Ничего не переименовано.</string>
-	<string name="manually_file_rename_count_1">Один файл переименован</string>
-	<string name="manually_file_rename_count_more">Переименовано файлов: %d</string>
-	<string name="manually_file_rename_progress_1">%1$d из %2$d файлов переименовано.</string>
-	<string name="manually_file_rename_progress_more">%1$d из %2$d файлов переименовано.</string>
-	<string name="manually_service_running">Сервис запущен в ручном режиме.</string>
-	<string name="manually_start_desc">Нажать для ручного запуска сервиса</string>
-	<string name="manually_start_title">Ручной запуск сервиса</string>
-	<string name="minutes_unit">минут</string>
-	<string name="move_file_enable">Перемещение переименованный файл в папку ниже выбранной.</string>
-	<string name="move_file_text_no_folder">Нет папка выбрана, не прикасайтесь этот текст, чтобы выбрать папку.</string>
-	<string name="move_file_text_selected_folder">Выбранные папки: %s</string>
-	<string name="new_folder">Новая папка</string>
-	<string name="no">Нет</string>
-	<string name="no_file_name_pattern">Нет Имя файла шаблон определенный</string>
-	<string name="no_folders">Нет папок</string>
-	<string name="obtain_logs">Сгенерировать лог для отчета…</string>
-	<string name="other_settings">Прочие настройки</string>
-	<string name="please_wait">Пожалуйста подождите…</string>
-	<string name="remove_rename_shortcut">Удалить иконку сервиса</string>
-	<string name="remove_rename_shortcut_desc">Удаление иконки сервиса с домашнего экрана</string>
-	<string name="rename_file_delay_desc">Следующий файл переименовать через</string>
-	<string name="rename_file_delay_title">Пауза между переименованиями</string>
-	<string name="rename_file_using_desc">Дата и время, когда файл был последний раз модифицирован.</string>
-	<string-array name="rename_file_using_labels">
-		<item>Дата и время, когда файлы были добавлены в медиа;</item>
-		<item>Дата и время, когда файлы были последний раз модифицированы;</item>
-		<item>EXIF или MetaData если таковые имеются.</item>
-	</string-array>
-	<string name="rename_file_using_title">Переименованный файл использует:</string>
-	<string name="rename_service_start_delay_desc">Старт сервиса после</string>
-	<string name="rename_service_start_delay_title">Задержка сервиса</string>
-	<string name="rename_shortcut">Иконка сервиса</string>
-	<string name="rename_shortcut_name">DSC переименование</string>
-	<string name="rename_video_enabled_desc">Включив эту функцию, видеофайлы будут также переименовываться. По умолчанию - только фото.</string>
-	<string name="rename_video_enabled_title">Переименование видео</string>
-	<string name="request_permissions_confirmation">Вы хотите, чтобы запросить необходимые разрешения приложения?</string>
-	<string name="request_permissions_desc">Выберите этот вариант, чтобы требовать для необходимых разрешений приложений: камера (используется для получения момента захвата), Место хранения (используется для переименования и перемещения файлов).</string>
-	<string name="request_permissions_ok">Все необходимые разрешения выдаются!</string>
-	<string name="request_permissions_title">Запрос Требуется разрешение приложения.</string>
-	<string name="seconds_unit">секунд</string>
-	<string name="send_debug_confirmation">Вы хотите послать отчет?\nВаше почтовое приложение отправит по e-mail 2 приложенных файла и, если необходимо,  добавьте пожалуйста свое короткое описание.\nСпасибо!</string>
-	<string name="send_debug_desc">Послать по e-mail отладочные логи</string>
-	<string name="send_debug_title">Послать отладочные логи</string>
-	<string name="send_report">Отправить отчет…</string>
-	<string name="service_choice_0">Сервис отключен.</string>
-	<string name="service_choice_1">Запуск сервиса по событиям камеры.</string>
-	<string name="service_choice_2">Запуск сервиса по событиям медиа контента.</string>
-	<string name="service_choice_3">Сервис запускается когда в выбранные папки добавляется файл. Вы должны выбрать \"Переименовать внутри папки\" как минимум одну папку в \"Выбор папки\".</string>
-	<string-array name="service_type_labels">
-		<item>Отключено</item>
-		<item>События камеры: сделано фото или видео.</item>
-		<item>Обозреватель медиа контента: фото или видео сохранены.</item>
-		<item>Обозреватель файлов: наблюдать за выбранными папками, когда файлы добавлены. Вы должны выбрать \"Переименовать внутри папки\" не менее одной папки \"Выбор папки\".</item>
-		<item>A permanent running service used to catch camera application notification events.</item>
-	</string-array>
-	<string name="thank_you_desc">Спасибо за покупку.</string>
-	<string name="thank_you_title">Спасибо за пожертвование!</string>
-	<string name="ui_settings">настройки пользовательского интерфейса</string>
-	<string name="yes">Да</string>
-<string name="create_rename_shortcut_v26_error">Не удалось создать ярлычок для DSC. Попробуйте сначала вручную удалить созданный раннее</string>
+    <string name="file_name_suffix_format_title">Суффикс для разрешения конфликтов</string>
+    <string name="file_rename_count_confirmation">Сбросить счётчик переименованных файлов?</string>
+    <string name="file_rename_count_desc">Нажать для сброса количества переименованных файлов</string>
+    <string name="file_rename_count_title">Количество переименованных файлов: %d</string>
+    <string name="filter_folder_no_folder">[Нет папки]</string>
+    <string name="filter_folder_title">Выберите папку</string>
+    <string name="folder_list_all_selected">Как минимум одна папка должна остаться не отмеченной!</string>
+    <string name="folder_list_confirmation">Удалить выбранные папки?</string>
+    <string name="folder_list_no_grant_permission_1">Ваша система отменено разрешения для папки ниже:\n\n%s\n\nПроверьте, где был определен в этой папке и пытаются выбрать его снова!</string>
+    <string name="folder_list_no_grant_permission_2">Ваша система отменено разрешения для папок ниже:.\n\n%s\n\nПроверьте, где были определены эти папки и попытаться выбрать их снова!</string>
+    <string name="folder_list_no_open_document_tree_support">Ваша версия Андроид не поддерживает выбор папок (ACTION_OPEN_DOCUMENT_TREE).\nВы хотите использовать внутреннюю палитру папки, чтобы выбрать папку? Использование внутреннего палитру папок приложение не будет предоставлено право на переименовывать и перемещать файлы!</string>
+    <string name="folder_list_no_selection">Выберите как минимум одну папку для удаления!</string>
+    <string name="folder_list_title">Список папок для наблюдения</string>
+    <string name="general_settings">Основные настройки</string>
+    <string name="license_desc">Подробнее о лицензиях на открытое ПО</string>
+    <string name="license_title">Открыть лицензии</string>
+    <string name="list_info_press">Добавить или удалить элементы</string>
+    <string name="loading_wait">Загрузка…</string>
+    <string name="manually_file_rename_count_0">Ничего не переименовано.</string>
+    <string name="manually_file_rename_count_1">Один файл переименован</string>
+    <string name="manually_file_rename_count_more">Переименовано файлов: %d</string>
+    <string name="manually_file_rename_progress_1">%1$d из %2$d файлов переименовано.</string>
+    <string name="manually_file_rename_progress_more">%1$d из %2$d файлов переименовано.</string>
+    <string name="manually_service_running">Сервис запущен в ручном режиме.</string>
+    <string name="manually_start_desc">Нажать для ручного запуска сервиса</string>
+    <string name="manually_start_title">Ручной запуск сервиса</string>
+    <string name="minutes_unit">минут</string>
+    <string name="move_file_enable">Перемещение переименованный файл в папку ниже выбранной.</string>
+    <string name="move_file_text_no_folder">Нет папка выбрана, не прикасайтесь этот текст, чтобы выбрать папку.</string>
+    <string name="move_file_text_selected_folder">Выбранные папки: %s</string>
+    <string name="new_folder">Новая папка</string>
+    <string name="no">Нет</string>
+    <string name="no_file_name_pattern">Нет Имя файла шаблон определенный</string>
+    <string name="no_folders">Нет папок</string>
+    <string name="obtain_logs">Сгенерировать лог для отчета…</string>
+    <string name="other_settings">Прочие настройки</string>
+    <string name="please_wait">Пожалуйста подождите…</string>
+    <string name="remove_rename_shortcut">Удалить иконку сервиса</string>
+    <string name="remove_rename_shortcut_desc">Удаление иконки сервиса с домашнего экрана</string>
+    <string name="rename_file_delay_desc">Следующий файл переименовать через</string>
+    <string name="rename_file_delay_title">Пауза между переименованиями</string>
+    <string name="rename_file_using_desc">Дата и время, когда файл был последний раз модифицирован.</string>
+    <string-array name="rename_file_using_labels">
+        <item>Дата и время, когда файлы были добавлены в медиа;</item>
+        <item>Дата и время, когда файлы были последний раз модифицированы;</item>
+        <item>EXIF или MetaData если таковые имеются.</item>
+    </string-array>
+    <string name="rename_file_using_title">Переименованный файл использует:</string>
+    <string name="rename_service_start_delay_desc">Старт сервиса после</string>
+    <string name="rename_service_start_delay_title">Задержка сервиса</string>
+    <string name="rename_shortcut">Иконка сервиса</string>
+    <string name="rename_shortcut_name">DSC переименование</string>
+    <string name="rename_video_enabled_desc">Включив эту функцию, видеофайлы будут также переименовываться. По умолчанию - только фото.</string>
+    <string name="rename_video_enabled_title">Переименование видео</string>
+    <string name="request_permissions_confirmation">Вы хотите, чтобы запросить необходимые разрешения приложения?</string>
+    <string name="request_permissions_desc">Выберите этот вариант, чтобы требовать для необходимых разрешений приложений: камера (используется для получения момента захвата), Место хранения (используется для переименования и перемещения файлов).</string>
+    <string name="request_permissions_ok">Все необходимые разрешения выдаются!</string>
+    <string name="request_permissions_title">Запрос Требуется разрешение приложения.</string>
+    <string name="seconds_unit">секунд</string>
+    <string name="send_debug_confirmation">Вы хотите послать отчет?\nВаше почтовое приложение отправит по e-mail 2 приложенных файла и, если необходимо,  добавьте пожалуйста свое короткое описание.\nСпасибо!</string>
+    <string name="send_debug_desc">Послать по e-mail отладочные логи</string>
+    <string name="send_debug_title">Послать отладочные логи</string>
+    <string name="send_report">Отправить отчет…</string>
+    <string name="service_choice_0">Сервис отключен.</string>
+    <string name="service_choice_1">Запуск сервиса по событиям камеры.</string>
+    <string name="service_choice_2">Запуск сервиса по событиям медиа контента.</string>
+    <string name="service_choice_3">Сервис запускается когда в выбранные папки добавляется файл. Вы должны выбрать \"Переименовать внутри папки\" как минимум одну папку в \"Выбор папки\".</string>
+    <string-array name="service_type_labels">
+        <item>Отключено</item>
+        <item>События камеры: сделано фото или видео.</item>
+        <item>Обозреватель медиа контента: фото или видео сохранены.</item>
+        <item>Обозреватель файлов: наблюдать за выбранными папками, когда файлы добавлены. Вы должны выбрать \"Переименовать внутри папки\" не менее одной папки \"Выбор папки\".</item>
+        <item>A permanent running service used to catch camera application notification events.</item>
+    </string-array>
+    <string name="thank_you_desc">Спасибо за покупку.</string>
+    <string name="thank_you_title">Спасибо за пожертвование!</string>
+    <string name="ui_settings">настройки пользовательского интерфейса</string>
+    <string name="yes">Да</string>
+    <string name="create_rename_shortcut_v26_error">Не удалось создать ярлычок для DSC. Попробуйте сначала вручную удалить созданный раннее</string>
     <string name="export_import_settings_group">Сохраненить, восстановить настройки</string>
     <string name="export_settings_confirmation">Сохранить настройки приложения?</string>
     <string name="export_settings_desc">Сохранить настройки приложения в папку на устройстве</string>
@@ -159,4 +159,4 @@
     <string name="invoke_media_scanner_for_file_desc">"Использовать сервис MediaScanner для переименованных файлов. Обычно это НЕ требуется! Включать только в случае проблем с кэшем при подключении по MTP. "</string>
     <string name="invoke_media_scanner_for_file_title">Использовать сервис MediaScanner</string>
     <string name="manually_file_rename_minus_1">Не удалось переименовать файл из-за отсутствия доступа к папке</string>
-    </resources>
+</resources>
